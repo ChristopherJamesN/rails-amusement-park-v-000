@@ -1,0 +1,6 @@
+<% if session[:user_id] %>
+  <h1><%= @user.name %></h1>
+<% else %>
+  <%= link_to('Sign In', 'signin') %>
+  <%= link_to('Sign Up', 'users/new') %>
+<% end %>

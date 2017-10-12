@@ -1,0 +1,7 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_for :user, url: '/sessions' do |f| %>
+  Name: <%= f.text_field :name %>
+  Password: <%= f.password_field :password %>
+  <%= f.submit "Sign In" %>
+<% end %>

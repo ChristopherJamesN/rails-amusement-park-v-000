@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+<h1>Mood: <%= @user.mood %></h1>
+<h1>Tickets: <%= @user.tickets %></h1>
+<h1>Height: <%= @user.height %></h1>
+<h1>Nausea: <%= @user.nausea %></h1>
+<h1>Happiness: <%= @user.happiness %></h1>
+<h1>Admin: <%= @user.admin %></h1>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if @user.admin %>
+<h1>ADMIN</h1>
+<% end %>
+<%= link_to('Log Out', '/sessions/destroy') %>
+<%= link_to('See attractions', '/attractions') %>
